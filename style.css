@@ -56,10 +56,11 @@ body.flex {
   grid-template-columns: 1fr 1fr;
 }
 .container {
-  width: 600px;
+  max-width: 600px;
   background-color: var(--color-white);
   border-radius: var(--border-radius);
   overflow: hidden;
+  margin: 0 1rem;
 }
 .current-price {
   color: var(--color-primary);
@@ -98,9 +99,12 @@ body.flex {
   align-items: center;
 }
 
-@media (max-width: 376px) {
+@media (max-width: 576px) {
   .container.grid {
-    grid-template-rows: 2fr 3fr;
+    grid-template-rows: 3fr 4fr;
     grid-template-columns: 1fr;
+  }
+  .container {
+    max-width: 375px;
   }
 }
